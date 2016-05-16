@@ -1,0 +1,7 @@
+/Release/
+*.project
+*.classpath
+*.settings
+bkp/
+bin/
+build/
