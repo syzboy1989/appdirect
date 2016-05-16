@@ -10,16 +10,16 @@ There are 2 ways to run this project
 
 Features present:
 
- Oauth verification for incoming requests.
+* Oauth verification for incoming requests.
 
- Oauth signature for outgoing reuqests.
+* Oauth signature for outgoing reuqests.
 
- A working API skeleton for subscription events & user assginment events
+* A working API skeleton for subscription events & user assginment events
 
 
 Missing things:
 
- Unit tests.
+* Unit tests.
 
- Internal implementation(internal logic per vendor) for processing subscriptions & user events
+* Internal implementation(internal logic per vendor) for processing subscriptions & user events
 
