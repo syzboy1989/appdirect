@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+version = '1.0'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.boot:spring-boot-starter-jetty:1.2.5.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.security.oauth:spring-security-oauth:2.0.9.RELEASE")
+    compile("oauth.signpost:signpost-core:1.2.1.2")
+    compile("org.apache.commons:commons-lang3:3.0")
+    testCompile("junit:junit")
+}
+
