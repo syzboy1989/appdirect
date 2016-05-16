@@ -27,27 +27,27 @@ public class User {
     /**
      * assign user a service
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value="/assign", method = { RequestMethod.GET })
-    public Response userAssign(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response userAssign(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return userService.userAssignment(eventUrl);
+        return userService.userAssignment(url);
     }
 
     /**
      * unassign a user from a service
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value = "/unassign", method = { RequestMethod.GET })
-    public Response userUnassign(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response userUnassign(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return userService.userUnassignment(eventUrl);
+        return userService.userUnassignment(url);
     }
 
 }

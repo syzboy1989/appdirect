@@ -24,54 +24,54 @@ public class Subscription {
     /**
      * create a subscription
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value="/create", method = { RequestMethod.GET })
-    public Response createSubscription(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response createSubscription(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return subscriptionService.createSubscription(eventUrl);
+        return subscriptionService.createSubscription(url);
 
     }
 
     /**
      * cancel a subscription
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value = "/cancel", method = { RequestMethod.GET })
-    public Response cancelSubscription(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response cancelSubscription(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return subscriptionService.cancelSubscription(eventUrl);
+        return subscriptionService.cancelSubscription(url);
     }
 
     /**
      * notice of status change of a subscription
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value = "/notice", method = { RequestMethod.GET })
-    public Response noticeSubscription(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response noticeSubscription(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return subscriptionService.subscriptionNotice(eventUrl);
+        return subscriptionService.subscriptionNotice(url);
     }
 
     /**
      * update a subscription
      * @param request
-     * @param eventUrl
+     * @param url
      * @return response indicating success or failure
      */
     @RequestMapping(value = "/update", method = { RequestMethod.GET })
-    public Response updateSubscription(HttpServletRequest request, @RequestParam String eventUrl) {
-        logger.info(eventUrl);
+    public Response updateSubscription(HttpServletRequest request, @RequestParam String url) {
+        logger.info(url);
 
-        return subscriptionService.updateSubscription(eventUrl);
+        return subscriptionService.updateSubscription(url);
     }
 
 }
