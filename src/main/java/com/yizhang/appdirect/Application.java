@@ -57,7 +57,7 @@ public class Application {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http.antMatcher("/oauth/**")
+            http.antMatcher("/**")
                     .addFilterBefore(twoLeggedOAuthProviderProcessingFilter, UsernamePasswordAuthenticationFilter.class)
                     .authorizeRequests().anyRequest().hasRole("OAUTH");
         }
